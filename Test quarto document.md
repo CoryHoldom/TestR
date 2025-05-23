@@ -1,26 +1,28 @@
 # Test quarto document with Git
 Cory Holdom
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a
-finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that
-includes both content and the output of embedded code. You can embed
-code like this:
+## Test Git Integration with Quarto
 
 ``` r
-1 + 1
+library(lme4)
 ```
 
-    [1] 2
+    Loading required package: Matrix
 
-You can add options to executable code like this
+``` r
+data(iris)
+```
 
-    [1] 4
+``` r
+plot(iris)
+```
 
-The `echo: false` option disables the printing of code (only output is
-displayed).
+![](Test-quarto-document_files/figure-commonmark/unnamed-chunk-2-1.png)
+
+``` r
+m1 <- lmer(Petal.Length ~ Sepal.Length * Sepal.Width * Petal.Width + (1|Species), iris)
+
+plot(m1)
+```
+
+![](Test-quarto-document_files/figure-commonmark/unnamed-chunk-3-1.png)

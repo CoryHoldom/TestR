@@ -5,23 +5,20 @@ format: gfm # Github-flavoured markdown
 editor: visual
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Test Git Integration with Quarto
 
 ```{r}
-1 + 1
-```
+library(lme4)
 
-You can add options to executable code like this
+data(iris)
+```
 
 ```{r}
-#| echo: false
-2 * 2
+plot(iris)
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+m1 <- lmer(Petal.Length ~ Sepal.Length * Sepal.Width * Petal.Width + (1|Species), iris)
+
+plot(m1)
+```
