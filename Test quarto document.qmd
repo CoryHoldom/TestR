@@ -2,6 +2,7 @@
 title: "Test quarto document with Git"
 author: "Cory Holdom"
 format: html
+  keep-md: true
 editor: visual
 ---
 
