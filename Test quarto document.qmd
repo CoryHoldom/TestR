@@ -1,8 +1,7 @@
 ---
 title: "Test quarto document with Git"
 author: "Cory Holdom"
-format: html
-keep-md: true
+format: gfm # Github-flavoured markdown
 editor: visual
 ---
 
