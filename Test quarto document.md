@@ -26,3 +26,9 @@ plot(m1)
 ```
 
 ![](Test-quarto-document_files/figure-commonmark/unnamed-chunk-3-1.png)
+
+``` r
+print("My favourite animal is the number 72.")
+```
+
+    [1] "My favourite animal is the number 72."

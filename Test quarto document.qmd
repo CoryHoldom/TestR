@@ -22,3 +22,7 @@ m1 <- lmer(Petal.Length ~ Sepal.Length * Sepal.Width * Petal.Width + (1|Species)
 
 plot(m1)
 ```
+
+```{r}
+print("My favourite animal is the number 72.")
+```
